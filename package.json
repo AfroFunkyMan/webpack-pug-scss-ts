@@ -6,7 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.3"
+    "webpack-cli": "^2.1.3",
+    "webpack-merge": "^4.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
