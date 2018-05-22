@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: './src/index.ts'
     },
     module: {
         rules: [
@@ -19,6 +19,10 @@ module.exports = {
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS
                 ]
+            },
+            {
+                test: /\.tsx?$/,
+                loader: "ts-loader"
             }
         ]
     },
@@ -29,5 +33,8 @@ module.exports = {
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
     }
 };
